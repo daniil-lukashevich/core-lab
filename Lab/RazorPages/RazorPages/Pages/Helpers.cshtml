@@ -1,0 +1,26 @@
+﻿@page "/helpers"
+@model RazorPages.Pages.HelpersModel
+@{
+}
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.EditorFor(m => m.Name)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Price)
+        @Html.EditorFor(m => m.Price)
+    </div>
+    <div>
+        @Html.DropDownListFor(m => m.CompanyId, new List<SelectListItem>()
+        {
+            new SelectListItem(){ Text = "My test", Selected = true, Value="test"}
+        })
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+}

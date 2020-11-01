@@ -1,0 +1,25 @@
+﻿
+
+@model StoreModel
+@{
+    ViewData["Title"] = "Store Info";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Id: @Model.Id</p>
+<p>Name: @Model.Name</p>
+
+
+@using (Html.BeginForm("Like", "Home", FormMethod.Post))
+{
+    <input type="submit" value="Like" />
+}
+
+
+@Html.CheckBox(
+@Html.HiddenFor(m => m.Name)
+@Html.LabelFor(m => m.Name, "Имя")
+@Html.Password(m => m.Password)
+@Html.RadioButtonFor(m => m.Option, "val")
+@Html.TextBoxFor(m => m.Name)
+@Html.TextAreaFor(m => m.Name, 10, 9, null)
