@@ -5,8 +5,4 @@
     <RootNamespace>Module_9</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Filters\" />
-  </ItemGroup>
-
 </Project>

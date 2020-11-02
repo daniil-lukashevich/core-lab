@@ -12,13 +12,17 @@ namespace RazorPages.Pages
     {
         private readonly ILogger<PrivacyModel> _logger;
 
+        public int Id { get; set; }
+
         public PrivacyModel(ILogger<PrivacyModel> logger)
         {
             _logger = logger;
         }
 
-        public void OnGet()
+        public ActionResult OnGet(int id)
         {
+            Id = id;
+            return Redirect("/test");
         }
     }
 }

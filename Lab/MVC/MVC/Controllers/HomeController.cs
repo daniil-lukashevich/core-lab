@@ -37,7 +37,7 @@ namespace MVC.Controllers
         [HttpGet]
         public IActionResult Store(string id)
         {
-            return new JsonResult(id);
+            return View(new StoreModel() { Id = 123 , Name = "as"});
         }
 
         [HttpGet]

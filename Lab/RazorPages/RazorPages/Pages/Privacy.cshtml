@@ -1,9 +1,10 @@
-﻿@page "{id}"
+﻿@page "/prv/{id:int}"
+@model PrivacyModel
 @{
     var userid = RouteData.Values["id"];
 }
 <h1>@userid</h1>
 
-@Html.
+<h1>Id from model: @Model.Id</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>

@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Module_9.Filters;
 using Module_9.Models;
 
 namespace Module_9.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -20,7 +15,6 @@ namespace Module_9.Controllers
             _logger = logger;
         }
 
-        [Authorize]
         public IActionResult Index()
         {
             return View();
@@ -35,6 +29,32 @@ namespace Module_9.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [IEFilter]
+        public IActionResult RecourseFilter()
+        {
+            return new JsonResult("recourse filter");
+        }
+
+        [IdApgrade]
+        public IActionResult ActionFilter(string id)
+        {
+            return new JsonResult($"action filter. ID: {id}");
+        }
+
+        [CustomHeader]
+        public IActionResult ResultFilter()
+        {
+            return new JsonResult("result filter");
+        }
+
+        [CustomException]
+        public IActionResult ExceptionFilter()
+        {
+            var zero = 0;
+            var x = 8 / zero;
+            return new JsonResult("exception filter");
         }
     }
 }
