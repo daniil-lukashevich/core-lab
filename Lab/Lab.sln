@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module8 RazorPages", "Razor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module7", "Test\Test\Module7.csproj", "{6ACDF121-8759-4CA9-A56E-5EDE090F9616}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module 10", "Module 10\Module 10.csproj", "{81B6A6E8-EDDD-4058-82B1-25F8E28105CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6ACDF121-8759-4CA9-A56E-5EDE090F9616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ACDF121-8759-4CA9-A56E-5EDE090F9616}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ACDF121-8759-4CA9-A56E-5EDE090F9616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B6A6E8-EDDD-4058-82B1-25F8E28105CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B6A6E8-EDDD-4058-82B1-25F8E28105CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B6A6E8-EDDD-4058-82B1-25F8E28105CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B6A6E8-EDDD-4058-82B1-25F8E28105CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

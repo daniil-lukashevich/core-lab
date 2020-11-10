@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Module_9.Extensions;
+using Module_9.Middleware;
+using System.Net;
 
 namespace Module_9
 {
@@ -19,7 +22,11 @@ namespace Module_9
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(optios =>
+            {
+                optios.Filters.Add(typeof(Authorization));
+            });
+            services.AddAuthentication();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,7 +72,12 @@ namespace Module_9
             //    await next.Invoke();
             //});
 
-            ///*Map*/
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync(res);
+            //});
+
+            /*Map*/
             //app.Map("/test", Test);
 
             ///*MapWhen*/
